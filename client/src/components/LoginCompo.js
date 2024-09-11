@@ -43,8 +43,8 @@ export default function LoginCompo() {
   }
   return (
     <div className='relative flex items-center h-screen'>
-      <div className='absolute top-0 right-5 '>
-        <img src={Logo} alt='Logo' className='w-[150px]' />
+      <div className='absolute top-4 right-5 '>
+        <img src={Logo} alt='Logo' className='w-[250px]' />
       </div>
       <div className='flex justify-center w-screen'>
         <div>
