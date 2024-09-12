@@ -48,7 +48,10 @@ const CreateUser = async (req, res) => {
     }
 }
 
+
+
 //get all user data
 module.exports = {
-    CreateUser
+    CreateUser,
+   
 }

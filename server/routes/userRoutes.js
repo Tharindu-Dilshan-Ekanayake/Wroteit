@@ -14,4 +14,5 @@ router.use(
 //routes
 router.post('/createuser', CreateUser)
 
+
 module.exports = router
