@@ -22,7 +22,7 @@ export default function CurrentUser() {
           <div>
             <div>
               <h1 className='text-5xl text-[#19191A]'><strong>Start Your Journey</strong></h1>
-              <label className='text-orange-500 text-1xl'><strong>Every great story starts with a single word. Write yours now!</strong></label>
+              <label className='text-[#19191a44] text-[15px]'>Every great story starts with a single word. Write yours now!</label>
             </div>
             <div className='pt-4'>
                 <h2 className='text-2xl text-[#19191A]'>Do you have an account?</h2>
