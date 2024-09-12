@@ -1,10 +1,12 @@
 import React from 'react'
 import UserNav from '../../components/userCompo/UserNav'
 
-export default function UserLandingPage() {
+export default function Settings() {
   return (
     <div>
-      <h1>User</h1>
+        <div>
+            <h1>Settings</h1>
+        </div>
       <div>
         <UserNav/>
       </div>
