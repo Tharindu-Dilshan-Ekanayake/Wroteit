@@ -53,7 +53,8 @@ const getprofile = (req, res) => {
                     const userProfile = {
                         _id: user._id,
                         email: user.email,
-                        fname: user.fname
+                        fname: user.fname,
+                        image:user.image
                     };
                     res.json(userProfile);
                 })

@@ -35,7 +35,8 @@ const userSchema = new mongoose.Schema({
     dob:{
         type: String,
         required: true
-    }
+    },
+    image: String,
 })
 
 userSchema.pre('save', async function(next) {
