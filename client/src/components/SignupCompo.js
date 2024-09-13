@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { toast } from 'react-hot-toast';
+import Userimage from '../images/userimage.png'
 
 export default function SignupCompo() {
   const [data, setData] = useState({
@@ -11,16 +12,31 @@ export default function SignupCompo() {
     password: '',
     confirmPassword: '',
     gender: '',
-    dob: ''
+    dob: '',
+    image: Userimage
   });
 
   const [errors, setErrors] = useState({});
-
+  
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setData({ ...data, [name]: value });
-    // Clear the error for this field when the user starts typing
-    setErrors({ ...errors, [name]: '' });
+    const { name, value, type, files } = e.target;
+    
+    if (type === 'file') {
+      const file = files[0];
+      const reader = new FileReader();
+
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        // Set the base64 image string to state
+        setData((prevData) => ({
+          ...prevData,
+          image: reader.result // Setting base64 encoded image
+        }));
+      };
+    } else {
+      setData({ ...data, [name]: value });
+      setErrors({ ...errors, [name]: '' });
+    }
   };
 
   const validateForm = () => {
@@ -58,7 +74,8 @@ export default function SignupCompo() {
             password: '',
             confirmPassword: '',
             gender: '',
-            dob: ''
+            dob: '',
+            image: Userimage
           });
           toast.success('Registration successful!');
         }

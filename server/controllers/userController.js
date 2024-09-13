@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken')
 //post user(Create user database)
 const CreateUser = async (req, res) => {
     try {
-        const { fname, lname, email, phone_number, password, role, gender, dob } = req.body;
+        const { fname, lname, email, phone_number, password, role, gender, dob, image } = req.body;
 
         
         // Check if email is already taken
@@ -32,7 +32,8 @@ const CreateUser = async (req, res) => {
             password, 
             role,
             gender,
-            dob
+            dob,
+            image
         })
         //save the user to database
         const newUserItem = await newUser.save();
