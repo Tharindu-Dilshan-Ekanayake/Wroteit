@@ -20,6 +20,7 @@ app.use(cookieParser()); // Now this will work without error
 //router
 app.use('/user', require('./routes/userRoutes'))
 app.use('/', require('./routes/authRoutes'))
+app.use('/blog', require('./routes/blogRoutes'))
 
 const port = 8000;
 
